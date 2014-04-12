@@ -11,6 +11,7 @@ public class EvilBird : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
 		rigidbody2D.AddForce(Vector2.right * speed);
-	
+
+
+		}
 	}
-}
