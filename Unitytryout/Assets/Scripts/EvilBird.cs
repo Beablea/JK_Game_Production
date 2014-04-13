@@ -3,9 +3,10 @@ using System.Collections;
 
 public class EvilBird : MonoBehaviour {
 	public float speed = -1.0f;
+	 
+
 	// Use this for initialization
-	void Start () {
-	
+	void Start () {	
 	}
 	
 	// Update is called once per frame
