@@ -1,24 +1,23 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Spawner : CameraForward{
+public class Spawner : MonoBehaviour{
 	public GameObject birde; 
+	public GameObject cam; 
 	public Vector2 spawn_position; 
 	public float timer = 0.0f;
 	public float minLevelHeight = 0.0f; 
 	public float maxLevelHeight = 7.0f; 
 	public float minLevelWidth = 0.0f; 
 	public float maxLevelWidth = 10.0f;  
-	float spY; 
-	float spX;
-	CameraForward player ; 
+
 	
 	public void calculateSpawnPosition(){
-		float spawnX = Random.Range (minLevelWidth, maxLevelWidth); 
-		float spawnY = Random.Range(minLevelHeight, maxLevelHeight);
-		spX = spawnX + player.position.x; 
-		spY = spawnY + player.position.y;
-		spawn_position = new Vector2 (spX, spY);
+//		float spawnX = Random.Range (minLevelWidth, maxLevelWidth); 
+//		float spawnY = Random.Range(minLevelHeight, maxLevelHeight);
+//		spawn_position = new Vector2 (spawnX, spawnY);
+		cam.transform.parent = birde.transform; 
+		 
 	}
 	public void spawn_birde(){
 		calculateSpawnPosition(); 
