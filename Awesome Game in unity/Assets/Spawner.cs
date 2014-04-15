@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Spawner : MonoBehaviour{
 	public GameObject birde; 
-	public GameObject cam; 
+	public GameObject player; 
 	public Vector2 spawn_position; 
 	public float timer = 0.0f;
 	public float minLevelHeight = 0.0f; 
@@ -13,10 +13,13 @@ public class Spawner : MonoBehaviour{
 
 	
 	public void calculateSpawnPosition(){
-//		float spawnX = Random.Range (minLevelWidth, maxLevelWidth); 
-//		float spawnY = Random.Range(minLevelHeight, maxLevelHeight);
-//		spawn_position = new Vector2 (spawnX, spawnY);
-		cam.transform.parent = birde.transform; 
+		maxLevelHeight+=player.position.y;
+		maxLevelWidth+=player.position.x;
+		float spawnX = Random.Range (player.position.x, maxLevelWidth); 
+		float spawnY = Random.Range(player.position.y, maxLevelHeight);
+spawn_position = new Vector2 (spawnX, spawnY);
+
+	player.transform = birde.transform; 
 		 
 	}
 	public void spawn_birde(){

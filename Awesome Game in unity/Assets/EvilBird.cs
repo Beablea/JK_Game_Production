@@ -4,7 +4,7 @@ using System.Collections;
 public class EvilBird : MonoBehaviour {
 	public float speed = -1.0f;
 	public bool dead = false;
-	float deathCooldown;
+	public float deathCooldown;
 	
 	// Use this for initialization
 	void Start () {	
