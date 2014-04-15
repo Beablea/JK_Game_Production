@@ -7,20 +7,14 @@ public class Spawner : MonoBehaviour{
 	public Vector3 spawn_position; 
 	public float timer = 0.0f;
 	public float minLevelHeight = 0.0f; 
-	public float maxLevelHeight = 7.0f; 
+	public float maxLevelHeight = 4.0f; 
 	public float minLevelWidth = 0.0f; 
 	public float maxLevelWidth = 10.0f;  
 
 	
 	public void calculateSpawnPosition(){
-		maxLevelHeight+=player.transform.position.y;
-		maxLevelWidth+=player.transform.position.x;
-		float spawnX = Random.Range (player.transform.position.x, maxLevelWidth); 
-		float spawnY = Random.Range(player.transform.position.y, maxLevelHeight);
-		float spawnZ = player.transform.position.z;
-		spawn_position = new Vector3 (spawnX, spawnY,spawnZ);
-
-		//	player.transform = birde.transform; 
+		Vector3 newVec = new Vector3 (Random.Range (minLevelWidth+player.transform.position.x, maxLevelWidth), Random.Range (minLevelHeight+player.transform.position.y, maxLevelHeight), 0);
+		spawn_position = newVec;
 		 
 	}
 	public void spawn_birde(){
