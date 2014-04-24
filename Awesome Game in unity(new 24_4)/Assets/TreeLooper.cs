@@ -11,7 +11,6 @@ public class TreeLooper : MonoBehaviour {
 	public float time = 0.0f;
 	public float minLevWidth = 1.0f; 
 	public float maxLevWidth = 10.0f;
-	public int CountCollisions; 
 
 	public void calculateTreePosition(){
 		trees = new GameObject[] {tree1, tree2, tree3}; 
@@ -42,11 +41,4 @@ public class TreeLooper : MonoBehaviour {
 		}
 	}
 
-		void OnTriggerEnter2D(Collider2D other){
-			if(other.tag == "Player")
-			CountCollisions++;
-		}
-		void OnGUI(){
-		GUI.Box(new Rect(10,10,100,20), "Score:" + CountCollisions);
-}
 }
