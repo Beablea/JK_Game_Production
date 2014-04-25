@@ -16,6 +16,9 @@ public class endScene : Squirrel {
 				Application.LoadLevel("new");
 			}
 		}
+		if(Input.GetKeyDown(KeyCode.Escape)){
+			Application.Quit();
+		}
 
 	}
 	void OnGUI(){
