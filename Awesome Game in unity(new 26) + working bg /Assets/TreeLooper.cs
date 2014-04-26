@@ -34,7 +34,7 @@ public class TreeLooper : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		time += Time.deltaTime;
-		if (time > 0.5f ){
+		if (time > 1.0f ){
 			spawn_tree(); 
 			time = 0.0f;
 		}
