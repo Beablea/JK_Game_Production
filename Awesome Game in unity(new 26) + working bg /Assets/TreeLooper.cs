@@ -14,7 +14,7 @@ public class TreeLooper : MonoBehaviour {
 	
 	public void calculateTreePosition(){
 		trees = new GameObject[] {tree1, tree2, tree3}; 
-		Vector3 treeVec = new Vector3 (Random.Range (minLevWidth+player.transform.position.x, maxLevWidth), 0, 0);
+		Vector3 treeVec = new Vector3 (Random.Range (minLevWidth+player.transform.position.x, maxLevWidth), -0.5f, 0);
 		tree_position = treeVec;
 		
 	}
@@ -23,7 +23,7 @@ public class TreeLooper : MonoBehaviour {
 		int spawnObjectIndex = Random.Range(0,trees.Length);
 		GameObject randPrefab = trees[spawnObjectIndex];
 		GameObject clonetree = (GameObject) Instantiate(randPrefab, tree_position, Quaternion.identity);
-		Destroy (clonetree, 7);
+		Destroy (clonetree, 20);
 		
 	}
 	// Use this for initialization
@@ -34,7 +34,7 @@ public class TreeLooper : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		time += Time.deltaTime;
-		if (time > 1.5f ){
+		if (time > 0.5f ){
 			spawn_tree(); 
 			time = 0.0f;
 		}

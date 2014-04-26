@@ -31,7 +31,7 @@ public class Spawner : MonoBehaviour{
 	void Update () {
 		timer += Time.deltaTime;
 		
-		if (timer > 1.5f ){
+		if (timer > 1.0f ){
 			spawn_birde(); 
 			timer = 0.0f;
 		}

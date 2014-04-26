@@ -1,8 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class endScene : Squirrel {
-
+public class endScene : Squirrel { 
 	// Use this for initialization
 	void Start () {
 	
@@ -17,5 +16,8 @@ public class endScene : Squirrel {
 			}
 		}
 
+	}
+	public void OnGUI(){
+		GUI.Box (new Rect (100, 100, 100, 100), "High score: "+ FinalScore);
 	}
 }
