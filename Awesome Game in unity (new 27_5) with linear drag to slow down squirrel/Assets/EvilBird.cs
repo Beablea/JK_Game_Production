@@ -3,7 +3,7 @@ using System.Collections;
 
 public class EvilBird : MonoBehaviour {
 	// Initilizing the variables 
-	public float speed = -1.0f;
+	public float speed = -0.5f;
 	public bool dead = false;
 	public float deathCooldown;
 

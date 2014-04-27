@@ -8,13 +8,13 @@ public class Spawner : MonoBehaviour{
 	public Vector3 spawn_position; 
 	public float timer = 0.0f;
 	public float minLevelHeight = 0.0f; 
-	public float maxLevelHeight = 4.0f; 
-	public float minLevelWidth = 0.0f; 
-	public float maxLevelWidth = 20.0f;  
+	public float maxLevelHeight = 2.0f; 
+	public float minLevelWidth = -100.0f; 
+	public float maxLevelWidth = 100.0f;  
 
 	// Caculating the ramdom spawning positions for the birds by the use of Vector3
 	public void calculateSpawnPosition(){
-		Vector3 newVec = new Vector3 (Random.Range (minLevelWidth+player.transform.position.x, maxLevelWidth), Random.Range (minLevelHeight+player.transform.position.y, maxLevelHeight), 0);
+		Vector3 newVec = new Vector3 (Random.Range (player.transform.position.x + minLevelWidth, maxLevelWidth), Random.Range (player.transform.position.y + minLevelHeight, maxLevelHeight), 0);
 		spawn_position = newVec;
 		 
 	}
@@ -23,7 +23,7 @@ public class Spawner : MonoBehaviour{
 		calculateSpawnPosition(); 
 		GameObject clone = (GameObject) Instantiate(birde, spawn_position, Quaternion.identity);
 		//Destroying the clone after 5 seconds
-		Destroy (clone, 5); 
+		Destroy (clone, 2); 
 		
 	}
 	
@@ -39,5 +39,6 @@ public class Spawner : MonoBehaviour{
 			spawn_birde(); 
 			timer = 0.0f;
 		}
+
 	}
 }
