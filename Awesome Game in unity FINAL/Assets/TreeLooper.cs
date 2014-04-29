@@ -28,7 +28,7 @@ public class TreeLooper : MonoBehaviour {
 		GameObject randPrefab = trees[spawnObjectIndex];
 		GameObject clonetree = (GameObject) Instantiate(randPrefab, tree_position, Quaternion.identity);
 		//destroying the trees after 12 seconds in the scene
-		Destroy (clonetree, 12);
+		Destroy (clonetree, 14);
 		
 	}
 	// Use this for initialization
