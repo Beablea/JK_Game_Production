@@ -14,6 +14,7 @@ public class scrollbg : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+		//animates background texture. Moves texture in the x axis by time since game start and a speed value set in inspektor.  
 		renderer.material.mainTextureOffset = new Vector2(Time.time * speed, 0f);
 	}
 }
