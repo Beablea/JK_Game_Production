@@ -10,6 +10,7 @@ public class startScene : Squirrel {
 	
 	// Update is called once per frame
 	void Update () {
+		//loads the game if space is pressed
 		if(Input.GetKeyDown(KeyCode.Space)){
 			didJump = true;
 			if (didJump){
